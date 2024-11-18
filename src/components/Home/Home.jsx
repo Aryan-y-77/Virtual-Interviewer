@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Card1 from './Card1';
 import LottieAnimation from '../Lottie';
 import animation1 from './animations/analysis.json';
@@ -104,13 +105,13 @@ export default function Home() {
                     ))}
                 </div>
                 
-                <div className='flex justify-between max-w-4xl mx-auto items-center mt-16'>
-                    <div className='flex flex-col'>
-                        <h1 className='text-white text-3xl max-w-md'>Take the first step toward your <span className='text-blue1'>dream job</span></h1>
-                        <p className='text-gray-400 text-md w-96 mt-3'>You can start practicing and improving you skills immediately.</p>
-                        <button className='text-white bg-blue1 px-3 py-2 rounded-full mt-8 w-36'>Sign Up</button>
+                <div className='flex justify-center mt-16'>
+                    <div className='flex flex-col max-w-md'>
+                        <h1 className='text-white text-3xl '>Take the first step toward your <span className='text-blue1'>dream job</span></h1>
+                        <p className='text-gray-400 max-w-sm text-md mt-3'>You can start practicing and improving you skills immediately.</p>
+                        <button className='text-white bg-blue1 w-36 py-3 rounded-full mt-8'>Sign Up</button>
                     </div>
-                    <img src="/home/dream_job.png" className='w-96 ' alt="" />
+                    <img src="" alt="" />
                 </div>
 
             </div>

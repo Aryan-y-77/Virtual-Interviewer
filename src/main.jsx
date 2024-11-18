@@ -14,6 +14,8 @@ import Camera_Preview2 from './components/Camera_Preview/Camera_Preview2.jsx';
 import Resume from './components/Resume/Resume.jsx';
 import Review_Interview from './components/Review_Interview/Review_Interview.jsx';
 import Analysis from './components/Review_Interview/Analysis.jsx';
+import About from './components/About/About.jsx';
+import Contact from './components/Contact/Contact.jsx';
 
 
 const router = createBrowserRouter(
@@ -29,6 +31,8 @@ const router = createBrowserRouter(
       <Route path="resume" element={<Resume />} />
       <Route path="review-interview" element={<Review_Interview />} />
       <Route path="analysis" element={<Analysis />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
     </Route>
   )
 )

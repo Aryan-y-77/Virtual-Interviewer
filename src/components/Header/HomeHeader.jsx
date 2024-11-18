@@ -1,8 +1,13 @@
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import LoginModal from "../Login/LoginModal";
 
 export default function HomeHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,38 +18,43 @@ export default function HomeHeader() {
       <nav className="bg-black border-gray-200 px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl mt-2">
           <Link to="/" className="flex items-center">
-            <div className='text-2xl ml-4 text-white font-bold'>Virtual <span className='text-blue1'>AI</span></div>
+            <div className="text-2xl ml-4 text-white font-bold">
+              Virtual <span className="text-blue1">AI</span>
+            </div>
           </Link>
           <div className="flex items-center lg:hidden">
-            <button
-              type="button"
-              className="text-white"
-              onClick={toggleMenu}
-            >
+            <button type="button" className="text-white" onClick={toggleMenu}>
               <svg
                 className="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                >
+              >
                 <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
                 ></path>
-                </svg>
+              </svg>
             </button>
           </div>
 
           <div className="flex items-center lg:order-2">
-            <Link
-              to="#"
-              className="text-black1 transition duration-200 ease-in-out bg-white hover:bg-gray-900 hover:text-white font-medium rounded-3xl text-sm px-5 lg:px-5 py-2 lg:py-2.5 mr-2 "
-            >
-              Login
-            </Link>
+
+            <div className=" flex items-center justify-center">
+              <Link
+                to="#"
+                onClick={openModal}
+                className="text-black1 transition duration-200 ease-in-out bg-white hover:bg-gray-900 hover:text-white font-medium rounded-3xl text-sm px-5 lg:px-5 py-2 lg:py-2.5 mr-2 "
+              >
+                Login
+              </Link>
+              <LoginModal isOpen={isModalOpen} onClose={closeModal} />
+            </div>
+
+            
             <Link
               to="#"
               className="text-white transition duration-200 ease-in-out bg-blue1 hover:bg-darkblue font-medium rounded-3xl text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
@@ -59,7 +69,9 @@ export default function HomeHeader() {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-blue1" : "text-gray-100"} hover:text-blue1 lg:p-0`
+                    `block py-2 pr-4 pl-3 duration-200 ${
+                      isActive ? "text-blue1" : "text-gray-100"
+                    } hover:text-blue1 lg:p-0`
                   }
                 >
                   Home
@@ -69,7 +81,9 @@ export default function HomeHeader() {
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-blue2" : "text-gray-100"} hover:text-blue1 lg:p-0`
+                    `block py-2 pr-4 pl-3 duration-200 ${
+                      isActive ? "text-blue2" : "text-gray-100"
+                    } hover:text-blue1 lg:p-0`
                   }
                 >
                   About
@@ -79,7 +93,9 @@ export default function HomeHeader() {
                 <NavLink
                   to="/contact"
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-blue2" : "text-gray-100"} hover:text-blue1 lg:p-0`
+                    `block py-2 pr-4 pl-3 duration-200 ${
+                      isActive ? "text-blue2" : "text-gray-100"
+                    } hover:text-blue1 lg:p-0`
                   }
                 >
                   Contact
@@ -87,9 +103,11 @@ export default function HomeHeader() {
               </li>
               <li>
                 <NavLink
-                  to="/github"
+                  to="https://github.com/meekhumor/Virtual-Interviewer"
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-blue2" : "text-gray-100"} hover:text-blue1 lg:p-0`
+                    `block py-2 pr-4 pl-3 duration-200 ${
+                      isActive ? "text-blue2" : "text-gray-100"
+                    } hover:text-blue1 lg:p-0`
                   }
                 >
                   Github
@@ -97,16 +115,17 @@ export default function HomeHeader() {
               </li>
             </ul>
           </div>
-          
         </div>
 
-        <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden w-full`}>
+        <div className={`${isMenuOpen ? "block" : "hidden"} lg:hidden w-full`}>
           <ul className="flex flex-col items-center mr-10 font-medium">
             <li>
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-blue1" : "text-gray-100"} hover:text-blue1 lg:p-0`
+                  `block py-2 pr-4 pl-3 duration-200 ${
+                    isActive ? "text-blue1" : "text-gray-100"
+                  } hover:text-blue1 lg:p-0`
                 }
               >
                 Home
@@ -116,7 +135,9 @@ export default function HomeHeader() {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-blue2" : "text-gray-100"} hover:text-blue1 lg:p-0`
+                  `block py-2 pr-4 pl-3 duration-200 ${
+                    isActive ? "text-blue2" : "text-gray-100"
+                  } hover:text-blue1 lg:p-0`
                 }
               >
                 About
@@ -126,7 +147,9 @@ export default function HomeHeader() {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-blue2" : "text-gray-100"} hover:text-blue1 lg:p-0`
+                  `block py-2 pr-4 pl-3 duration-200 ${
+                    isActive ? "text-blue2" : "text-gray-100"
+                  } hover:text-blue1 lg:p-0`
                 }
               >
                 Contact
@@ -136,7 +159,9 @@ export default function HomeHeader() {
               <NavLink
                 to="/github"
                 className={({ isActive }) =>
-                  `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-blue2" : "text-gray-100"} hover:text-blue1 lg:p-0`
+                  `block py-2 pr-4 pl-3 duration-200 ${
+                    isActive ? "text-blue2" : "text-gray-100"
+                  } hover:text-blue1 lg:p-0`
                 }
               >
                 Github
@@ -144,9 +169,7 @@ export default function HomeHeader() {
             </li>
           </ul>
         </div>
-
       </nav>
     </header>
   );
 }
-
