@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import CardSign from "./CardSign";
+import axios from "axios"
 
 const signup = [
   {
@@ -10,7 +11,7 @@ const signup = [
   {
     title: "AI powered interviews",
     description:
-      "Upload your rsume and job description for custom-tailored practice sessions.",
+      "Upload your resume and job description for custom-tailored practice sessions.",
   },
   {
     title: "Practice smarted not harder.",
@@ -19,6 +20,18 @@ const signup = [
 ];
 
 export default function Register() {
+  const [email, setEmail] = useState(""); 
+  const handleRegister = async (e) => { 
+    e.preventDefault(); 
+    try { 
+      const response = await axios.post('/accounts/register/', { email }); 
+      alert(response.data.message); 
+    } 
+    catch (error) {
+       console.error(error); 
+       alert('Registration failed. Please try again.'); 
+      }
+    };
   return (
     <div className="mx-auto w-full max-w-10xl">
 
@@ -50,7 +63,7 @@ export default function Register() {
           <div className="flex flex-col my-24 m-auto scale-110">
             <h1 className="text-white text-3xl mb-14">Sign Up</h1>
 
-            <form className="flex flex-col">
+            <form onSubmit={handleRegister} className="flex flex-col">
               <label htmlFor="email" className="text-gray-200 ml-2 mb-2">
                 Email
               </label>
