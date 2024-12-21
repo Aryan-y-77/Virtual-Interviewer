@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import RoomJoinPage from "./RoomJoinPage";
-import CreateRoomPage from "./CreateRoomPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // Removed BrowserRouter import
+import Home from "./Home/Home";
 
 export default class HomePage extends Component {
     constructor(props) {
@@ -10,13 +9,10 @@ export default class HomePage extends Component {
 
     render() {
         return (
-            <Router>
-                <Routes>
-                    <Route path="/" element={<p>This is the home page</p>} />
-                    <Route path="/join" element={<RoomJoinPage />} />
-                    <Route path="/create" element={<CreateRoomPage />} />
-                </Routes>
-            </Router>
+            <Routes>
+                <Route path="/" element={<p>This is the home page</p>} />
+                <Route path="/home" element={<Home />} /> 
+            </Routes>
         );
     }
 }

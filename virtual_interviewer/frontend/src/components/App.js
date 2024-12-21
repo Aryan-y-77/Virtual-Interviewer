@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { createRoot } from "react-dom/client"; // Correct import for React 18+
+import { BrowserRouter as Router } from "react-router-dom"; // Import Router
 import HomePage from "./HomePage";
 
 export default class App extends Component {
@@ -9,9 +10,11 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <HomePage />
-      </div>
+      <Router> {/* Wrap HomePage with BrowserRouter */}
+        <div>
+          <HomePage />
+        </div>
+      </Router>
     );
   }
 }
