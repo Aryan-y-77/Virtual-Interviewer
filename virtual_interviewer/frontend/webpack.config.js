@@ -19,10 +19,18 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/, // Match CSS files
+        use: [
+          "style-loader", // Injects styles into the DOM
+          "css-loader",   // Resolves CSS imports
+          "postcss-loader" // Processes Tailwind directives
+        ],
+      },
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"], // Add .jsx extension support
+    extensions: [".js", ".jsx", ".css"],
   },
   optimization: {
     minimize: true,
@@ -30,7 +38,6 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {
-        // This has effect on the react lib size
         NODE_ENV: JSON.stringify("production"),
       },
     }),
