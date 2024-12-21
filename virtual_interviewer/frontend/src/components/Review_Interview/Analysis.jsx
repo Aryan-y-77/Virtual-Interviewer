@@ -7,28 +7,28 @@ export default function Analysis() {
     {
       title:"Pace",
       label:"words/min",
-      image:"analysis/pace.svg",
+      image:"../../static/images/analysis/pace.svg",
       number: 246,
       check: "good"
     },
     {
       title:"Filler Words",
       label:"total",
-      image:"analysis/filler-words.svg",
+      image:"../../static/images/analysis/filler-words.svg",
       number: 15,
       check: "bad"
     },
     {
       title:"Pause",
       label:"total",
-      image:"analysis/pause.svg",
+      image:"../../static/images/analysis/pause.svg",
       number: 0,
       check: "good"
     },
     {
       title:"Power Words",
       label:"total",
-      image:"analysis/power-words.svg",
+      image:"../../static/images/analysis/power-words.svg",
       number: 0,
       check: "bad"
     },

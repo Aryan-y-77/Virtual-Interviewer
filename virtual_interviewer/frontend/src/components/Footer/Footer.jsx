@@ -11,9 +11,9 @@ export default function Footer() {
       </div>
 
       <div className="flex gap-6 justify-center mt-6">
-        <img src="footer/linkedin.svg" className="w-6" alt="" />
-        <img src="footer/github.svg" className="w-6" alt="" />
-        <img src="footer/discord.svg" className="w-6" alt="" />
+        <img src="../../static/images/footer/linkedin.svg" className="w-6" alt="" />
+        <img src="../../static/images/footer/github.svg" className="w-6" alt="" />
+        <img src="../../static/images/footer/discord.svg" className="w-6" alt="" />
       </div>
 
       <div className="text-center mt-14 text-xs flex flex-col gap-1 mb-8">

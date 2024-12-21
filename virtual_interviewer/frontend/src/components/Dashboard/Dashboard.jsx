@@ -6,19 +6,19 @@ const interview = [
         title: 'General Interviews',
         description: 'Covers the questions you are most likely to get while interviewing.',
         tagline: 'Start Interview',
-        image: '/dashboard/icon1.svg'
+        image: '../../static/images/dashboard/icon1.svg'
     },
     {
         title: 'Interview by Job Position',
         description: 'Our AI selects the most relevant questions based on your job position',
         tagline: 'Choose Job Position',
-        image: '/dashboard/icon2.svg'
+        image: '../../static/images/dashboard/icon2.svg'
     },
     {
         title: 'Custom-Built Interviews',
         description: 'Interview with your own questions, or take assigned interviews.',
         tagline: 'Start Interview',
-        image: '/dashboard/icon3.svg'
+        image: '../../static/images/dashboard/icon3.svg'
     }
 ]
 

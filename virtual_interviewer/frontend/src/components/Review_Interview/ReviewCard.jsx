@@ -13,8 +13,8 @@ function ReviewCard({title, level, mode, time, day}) {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <img src="/share.svg" className="w-8 h-6" alt="" />
-          <img src="/delete.svg" className="w-8 h-6" alt="" />
+          <img src="../../static/images/share.svg" className="w-8 h-6" alt="" />
+          <img src="../../static/images/delete.svg" className="w-8 h-6" alt="" />
           <button className='rounded-2xl  text-gray-700 bg-white px-4 py-2 text-sm'>View</button>
         </div>
       </div>

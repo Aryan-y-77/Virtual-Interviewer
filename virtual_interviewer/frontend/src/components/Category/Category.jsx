@@ -8,7 +8,7 @@ const category = [
     level: "Mid",
     time: "30",
     questions: "9",
-    image: "/category/icon1.svg",
+    image: "../../static/images/category/icon1.svg",
   },
   {
     label: "Cognitive Skills",
@@ -16,7 +16,7 @@ const category = [
     level: "Entry",
     time: "25",
     questions: "10",
-    image: "/category/icon2.svg",
+    image: "../../static/images/category/icon2.svg",
   },
   {
     label: "Cognitive Skills",
@@ -24,7 +24,7 @@ const category = [
     level: "Mid",
     time: "25",
     questions: "9",
-    image: "/category/icon3.svg",
+    image: "../../static/images/category/icon3.svg",
   },
   {
     label: "Cognitive Skills",
@@ -32,7 +32,7 @@ const category = [
     level: "Mid",
     time: "30",
     questions: "10",
-    image: "/category/icon4.svg",
+    image: "../../static/images/category/icon4.svg",
   },
   {
     label: "Leadership Skills",
@@ -40,7 +40,7 @@ const category = [
     level: "Mid",
     time: "30",
     questions: "10",
-    image: "/category/icon5.svg",
+    image: "../../static/images/category/icon5.svg",
   },
   {
     label: "Leadership Skills",
@@ -48,7 +48,7 @@ const category = [
     level: "Management",
     time: "30",
     questions: "10",
-    image: "/category/icon6.svg",
+    image: "../../static/images/category/icon6.svg",
   },
 ];
 

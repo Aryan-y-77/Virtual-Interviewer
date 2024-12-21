@@ -18,7 +18,7 @@ export default function Resume() {
         </div>
 
         <div className="flex gap-3 bg-darkblue bg-opacity-40 items-center py-4 px-4 rounded-xl mb-14">
-          <img src="/file-upload.png" className="w-8 h-8 mr-2 " alt="" />
+          <img src="../../static/images/file-upload.png" className="w-8 h-8 mr-2 " alt="" />
           <p className="text-gray-400 w-52 text-sm">
             Drag and drop files or click Upload PDF or DOCX
           </p>

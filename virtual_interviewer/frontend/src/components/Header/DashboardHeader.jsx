@@ -26,14 +26,14 @@ export default function DashboardHeader() {
 
           <div className="flex items-center gap-3 px-2 py-1.5 bg-darkblue bg-opacity-50 rounded-2xl">
             <div className="bg-gray-300 w-6 h-6 rounded-full flex justify-center items-center font-semibold text-xs">V</div>
-            <img src="/down-arrow.png" className="w-4 h-4" alt="" />
+            <img src="../../static/images/down-arrow.png" className="w-4 h-4" alt="" />
           </div>
 
         </div>
 
         <div className={`bg-black2 ${isMenuOpen ? 'block' : 'hidden'} h-screen w-1/4 z-10 absolute top-0 left-0`}>
           <div className="flex justify-end mt-4 mr-4">
-            <img src="/close.svg" className="`${isMenuOpen ? 'block' : 'hidden'}` flex w-8 h-8 opacity-75 cursor-pointer" alt="" onClick={toggleMenu} />
+            <img src="../../static/images/close.svg" className="`${isMenuOpen ? 'block' : 'hidden'}` flex w-8 h-8 opacity-75 cursor-pointer" alt="" onClick={toggleMenu} />
           </div>
 
           <div className={`${isMenuOpen ? 'block' : 'hidden'} `}>
