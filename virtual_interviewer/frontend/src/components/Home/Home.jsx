@@ -29,27 +29,27 @@ const features = [
     {
         title: 'Unlimited practice, from anywhere',
         description: 'Take unlimited online mock interviews whenever you want, wherever you want.',
-        image: 'home/icon1.svg'
+        image: '../../static/images/home/icon1.svg'
     },
     {
         title: 'Real interview pressure, real results',
         description: 'We record your responses to create realistic interview pressure.',
-        image: 'home/icon2.svg'
+        image: '../../static/images/home/icon2.svg'
     },
     {
         title: 'Self-review for self-improvement',
         description: 'Know exactly how you have performed and refine your approach to nail the interview.',
-        image: 'home/icon3.svg'
+        image: '../../static/images/home/icon3.svg'
     },
     {
         title: 'Tailor-made interview questions',
         description: 'Personalize your prep with custom questions tailored to your job roles and industries.',
-        image: 'home/icon4.svg'
+        image: '../../static/images/home/icon4.svg'
     },
     {
         title: 'Level up your skills',
         description: 'Access curated resources to continuously improve your interview skills and stay ahead.',
-        image: 'home/icon5.svg'
+        image: '../../static/images/home/icon5.svg'
     }
 ]
 

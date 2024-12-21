@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:app {
+    font-family: 'Libre Baskerville', Libre, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+  
+body { 
+    @apply bg-black;
+}
+  
+  
