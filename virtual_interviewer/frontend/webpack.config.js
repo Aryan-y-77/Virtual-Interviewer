@@ -5,13 +5,26 @@ module.exports = {
   mode: 'development',
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "./static/frontend"),
-    filename: "[name].js",
+    path: path.resolve(__dirname, "static/frontend"),
+    filename: "main.js",
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "templates/frontend"),
+    },
+    port: 3000,
+    historyApiFallback: true,
+    headers: {
+      "Cache-Control": "no-cache, no-store, must-revalidate",
+      "Pragma": "no-cache",
+      "Expires": "0",
+    },
+    watchFiles: ['src/**/*', 'templates/**/*'],
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, // Match both .js and .jsx files
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -21,17 +34,13 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/, // Match CSS files
-        use: [
-          "style-loader", // Injects styles into the DOM
-          "css-loader",   // Resolves CSS imports
-          "postcss-loader" // Processes Tailwind directives
-        ],
+        test: /\.css$/,
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx", ".css"],
+    extensions: [".js", ".jsx"],
   },
   optimization: {
     minimize: true,
