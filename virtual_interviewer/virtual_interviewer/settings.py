@@ -81,7 +81,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "frontend/static/frontend"),  # Include Webpack output folder
+    os.path.join(BASE_DIR, "frontend/static"),  # Include Webpack output folder
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
