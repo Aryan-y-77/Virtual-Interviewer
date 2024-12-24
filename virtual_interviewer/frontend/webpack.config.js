@@ -2,24 +2,25 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "static/frontend"),
     filename: "main.js",
+    publicPath: "/static/frontend/", // Public URL for static files
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "templates/frontend"),
+      directory: path.resolve(__dirname, "templates/frontend"), // Serve React templates
     },
     port: 3000,
-    historyApiFallback: true,
+    historyApiFallback: true, // Ensure React Router paths work
     headers: {
       "Cache-Control": "no-cache, no-store, must-revalidate",
       "Pragma": "no-cache",
       "Expires": "0",
     },
-    watchFiles: ['src/**/*', 'templates/**/*'],
+    watchFiles: ["src/**/*", "templates/**/*"],
   },
   module: {
     rules: [
@@ -47,9 +48,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify("development"),
-      },
+      "process.env.NODE_ENV": JSON.stringify("development"),
     }),
   ],
 };
